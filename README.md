@@ -1,2 +1,6 @@
-# s15_newgord_data_lecture_notes
-Lecture notes for Spring 2015 Data Engineering course
+# Lecture Notes for Data Engineering in Spring 2015
+
+## Lecture 1
+
+
+

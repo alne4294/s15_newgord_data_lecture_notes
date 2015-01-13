@@ -12,7 +12,8 @@
 Data Modeling is hard.
 
 #### Data Lifecycle
-Question -> collection/generation -> clean up -> storage -> processing/analysis -> query+visualize+act -> (back to beginning)
-|
-V
-curation, triage, persistance
+Question (curation, triage, persistence) -> collection/generation -> clean up -> storage -> processing/analysis -> query+visualize+act -> (back to beginning)
+
+#### HTTP request and response cycle
+http:// <-> http request or response (networking protocol, GET/POST/PUT/DELETE) -> HTML
+

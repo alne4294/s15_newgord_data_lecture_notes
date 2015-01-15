@@ -27,3 +27,8 @@ http:// <-> http request or response (networking protocol, GET/POST/PUT/DELETE) 
 * Two types: Github flavored (GFM) and standard (SM)
 * Can be used for: styling, word formatting, images, lists (ordered and unordered), links, horizontal lines, tables, code blocks
 * Two spaces or two enters create new paragraph
+
+Daring Fireball - markdown
+
+#### Services Continued
+

@@ -30,8 +30,6 @@ http:// <-> http request or response (networking protocol, GET/POST/PUT/DELETE) 
 
 Daring Fireball - markdown
 
-#### Services Continued
-
 #### HTTP request and response cycle cont'd
 
 Browser <--> Web/App Server <--> Handler

@@ -111,3 +111,12 @@ While performing an operation on one resource, you reference other resources (by
   * Could have used HTTP Status Codes (404, 500, etc.)
   * Most services will use combination of both.
 * Persistence - how are resources stored?
+
+
+##### Example
+Contacts Web Service using Ruby and Javascript in addition to:
+* Sinatra - Ruby web framework
+* Rspec - testing framework, behavior-driven design, both on server and client side
+* Typhoeus
+* Node
+* Express

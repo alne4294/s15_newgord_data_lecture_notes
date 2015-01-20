@@ -70,3 +70,44 @@ DELETE - Destroy        (Delete user)
  3. What inputs are acceptable?  
  4. How to format outputs?  
  5. How to implement error handling?
+
+## Lecture 3
+
+#### RESTFUL WEB SERVICES
+
+REST - architectural style for web services by Roy Fielding at UC Irvine.  (alternative to SOAP).  
+
+Example REST resources:
+```
+GET /api/1.0/users
+GET /api/1.0/users/0
+POST /api/1.0/users
+PUT /api/1.0/users/0
+DELETE /api/1.0/users/0
+GET /api/1.0/search?q=tattersail
+```
+
+JSON format is king for RESTful services. HTML and XML are also typical formats.
+
+Data sent over POST and PUT. POSTS can contain everything in the url.  Or in the body of the HTTP request.
+
+Authentication data appears in HTTP headers if the request needs to be authenticated (Basic, OAuth).
+
+###### Operations on two resources:
+
+```
+GET /api/1.0/posts/0/comments/1
+POST /api/1.0/posts/0/comments
+```
+Or:
+
+While performing an operation on one resource, you reference other resources (by id) in the data that is sent with the request.
+
+###### Issues
+* Security - how do you authenticate users?
+* Identity - how are ids assigned to resources?
+* Failure - how do we handle failure situations?
+  * In the example today, we can use JSON.
+  * Could have used HTTP Status Codes (404, 500, etc.)
+  * Most services will use combination of both.
+* Persistence - how are resources stored?

@@ -120,3 +120,110 @@ Contacts Web Service using Ruby and Javascript in addition to:
 * Typhoeus
 * Node
 * Express
+
+## Lecture 3
+
+##### Github Presentation
+
+###### Workflow
+* Untracked
+* Unmodified
+* Staged
+* Remote
+
+Conflict best practice: Pull, Merge, Pull, Push
+
+###### Initialization
+Does the background work to start a git repository in the current directory.
+```
+git init
+```
+
+Creates a new git repo in current dir that is copy of remote repo
+```
+git clone <remote_repository_addresss>
+```
+
+###### Branching
+```
+git branch
+git branch <new_branch_name>
+```
+
+To delete
+```
+git branch -d <new_branch_name>
+```
+
+```
+git checkout <branch_name>
+git checkout <commit>
+```
+
+###### Add and Commit
+```
+git add <file>
+git commit -m "Commit Message"
+```
+
+###### Merging
+
+Merges the name branch into the current branch.
+```
+git merge <branch_name>
+```
+
+###### How to Resolve Conflicts
+
+1. open file with conflict
+2. find the conflict
+3. remove the markers and choose the lines of code which should not be the result of the merge
+4. save the file
+5. repeat from 1 until there are no more conflicts
+6. add and commit the results of the merge
+
+###### Push and Pull
+
+Params are optional if the defaults are set
+```
+git pull <remote_repo> <branch_name>
+```
+
+Pushes all updated branches to their equivalent in the remote repo
+```
+git push <remote_repo>
+```
+
+###### Status
+
+File statuses: untracked, unmodified, modified, staged
+-b provides name for current branch
+```
+git status -b
+```
+
+###### Non-tracked files
+
+Handled with .gitignore.  More than one can be used in single repo.  Removeds unwanted files from being marked as untracked.  See formatting for .gitignore.
+
+###### Other useful commands
+
+```
+log - history of commits
+remote - setup remote knowledge of remote repos
+stash - similar to shelving in other VCS
+rebase - method for changing how branches are related
+diff - show differences between two states of the repo
+fetch - gets changes, but does not integrate into local repo
+reset - move about current head
+tag - mark git objects
+mv - move a files location within a repo
+rm - stop tracking the changes to a file
+```
+
+
+
+
+
+
+

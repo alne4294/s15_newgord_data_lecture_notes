@@ -123,7 +123,7 @@ Contacts Web Service using Ruby and Javascript in addition to:
 
 ## Lecture 3
 
-##### Github Presentation
+#### Github Presentation
 
 ###### Workflow
 * Untracked

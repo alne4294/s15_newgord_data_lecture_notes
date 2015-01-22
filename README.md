@@ -123,7 +123,7 @@ Contacts Web Service using Ruby and Javascript in addition to:
 
 ## Lecture 3
 
-#### Github Presentation
+#### Git Presentation
 
 ###### Workflow
 * Untracked
@@ -221,9 +221,19 @@ mv - move a files location within a repo
 rm - stop tracking the changes to a file
 ```
 
+#### Github Presentation
 
+1. Create branch
+2. Add some commits
+3. Open a pull request (can use '@mention')
+4. Discuss if good
+5. Merge back into production
 
+A fork is an exact copy of the repository. Splitting the project. You don't need collaborator access. If you have collaborator access, you can just branch.
 
+Note: Master is always deployable to production.
 
+Emoji - :thumbsup: or :shipit:
 
+Can also use keywords.
 

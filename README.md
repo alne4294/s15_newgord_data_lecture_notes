@@ -121,7 +121,7 @@ Contacts Web Service using Ruby and Javascript in addition to:
 * Node
 * Express
 
-## Lecture 3
+## Lecture 4
 
 #### Git Presentation
 

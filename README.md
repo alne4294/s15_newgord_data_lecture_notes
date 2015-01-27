@@ -314,9 +314,43 @@ process.nextTick(function(){
 console.log("second!");
 ```
 
-* Our program would be the same if you replaced *process.nextTick()* with *setImmediate()*
+* Our program would be the same if you replaced _process.nextTick()_ with _setImmediate()_
 * They both schedule a funtion for the next iteration of the event loop
-  * However, *setImmediate()* allows IO-related callbacks to process first.
-  * *process.nextTick()* will prioritize your function, possibly causing IO starvation
-* *setTimeout()* takes a second parameter that specifies how long to wait before the function is executed
-* *setInterval()* takes a second parameter that specifies the interval at which this function should be executed
+  * However, _setImmediate()_ allows IO-related callbacks to process first.
+  * _process.nextTick()_ will prioritize your function, possibly causing IO starvation
+* _setTimeout()_ takes a second parameter that specifies how long to wait before the function is executed
+* _setInterval()_ takes a second parameter that specifies the interval at which this function should be executed
+
+Node is ideal for event-style programming.
+
+###### Callback hell
+Callbacks are great for asynchronous programming, but *Callback hell* happens where callbacks get indented.  Each callback has a delay.
+
+Occurs when you chain multiple asynchronous calls together.  To solve:
+1. Use synchronous functions instead (discouraged because can cause blocking)
+2. Use named callback functions
+3. 
+
+Example of closure:
+```javascript
+var multiple = function(multiple){
+  reutrn function(num){
+    return num * multiple;
+  };
+};
+var byThree = multiple(3);
+var byFour = multiple(4);
+console.log("byThree(3): %d", byThree(3));
+console.log("byFour(4): %d", byFour(4));
+```
+
+##### Node Exectution Model
+* Node is single threaded for user-written code
+* Any code that you write is guaranteed to be syncrhonous
+* You do not have to worry about race conditions
+* IO is handeled in parallel
+* If you issue an asynchronous call for IO
+  * your callback is registered
+  * the IO call is executed in a separate thread
+  * other events on the event loop are handled as normal
+  * at some point, the IO completes and your callback is invoked

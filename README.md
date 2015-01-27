@@ -237,3 +237,86 @@ Emoji - :thumbsup: or :shipit:
 
 Can also use keywords.
 
+## Lecture 5
+
+#### Node.js
+
+Serverside tool and framework for executing Google's V8 javascript engine.
+
+###### Explanation 1
+Helloworld via HTTP
+```javascript
+// Load the http module to create an http server.
+var http = require('http');
+
+// Configure our HTTP server to respond with Hello World to all requests.
+var server = http.createServer(function (request, response) {
+  response.writeHead(200, {"Content-Type": "text/plain"});
+  response.end("Hello World\n");
+});
+
+// Listen on port 8000, IP defaults to 127.0.0.1
+server.listen(8000);
+
+// Put a friendly message on the terminal
+console.log("Server running at http://127.0.0.1:8000/");
+```
+
+* Most code in node is packaged inside of a module. 
+* HTTP is a core module, provided by Node.js itself. 
+* npm package manager
+
+###### Explanation 2
+http provides function called createServer(), which returns an object with a method listen().
+```javascript
+http.createSserver(<function>).listen(1337, '127.0.0.1');
+```
+
+###### Explanation 3
+anonymous function passed to function
+```javascript
+function(req, res){
+  res.writeHead(200, {'Content-Type':'text/plain'});
+  res.end('Hello World\n');
+}
+```
+
+###### Explanation 4
+```javascript
+console.log('Server running at http://127.0.0.1/1337);
+```
+
+###### Explanation 5
+All of this is executed immediately when passed to node.  If no future work remained, node would shut down.  This particular program will run forever because of event to check for new requests on every cycle of the event loop.
+```
+1. Get the http module
+2. Create a server; register a function; start a server
+3. Print out a message
+```
+
+##### Event Loops
+Can add work to the event queue.
+
+Functions that you can add to the queue for later execution
+```javascript
+process.nextTick()
+setImmediate()
+setTimeout()
+setInterval()
+```
+
+A simple example using process.nextTick()
+```javascript
+consol.log("first!");
+process.nextTick(function(){
+  console.log("third!");
+  });
+console.log("second!");
+```
+
+* Our program would be the same if you replaced *process.nextTick()* with *setImmediate()*
+* They both schedule a funtion for the next iteration of the event loop
+  * However, *setImmediate()* allows IO-related callbacks to process first.
+  * *process.nextTick()* will prioritize your function, possibly causing IO starvation
+* *setTimeout()* takes a second parameter that specifies how long to wait before the function is executed
+* *setInterval()* takes a second parameter that specifies the interval at which this function should be executed

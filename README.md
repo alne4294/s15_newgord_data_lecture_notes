@@ -354,3 +354,15 @@ console.log("byFour(4): %d", byFour(4));
   * the IO call is executed in a separate thread
   * other events on the event loop are handled as normal
   * at some point, the IO completes and your callback is invoked
+
+##### Curl Example
+```
+//GET Requests
+curl http://epic-research.cs.colorado.edu:8080/api/1.0/methods
+curl http://epic-research.cs.colorado.edu:8080/api/1.0/first
+curl http://epic-research.cs.colorado.edu:8080/api/1.0/second
+curl http://epic-research.cs.colorado.edu:8080/api/1.0/third
+
+//POST Request
+curl -X POST --data '{"value":1000, "author":"Ken"}' http://epic-research.cs.colorado.edu:8080/api/1.0/answer
+```

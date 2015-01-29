@@ -366,3 +366,81 @@ curl http://epic-research.cs.colorado.edu:8080/api/1.0/third
 //POST Request
 curl -X POST --data '{"value":1000, "author":"Ken"}' http://epic-research.cs.colorado.edu:8080/api/1.0/answer
 ```
+
+## Lecture 6
+
+#### Express
+* web application framework wrtitten in javascript for use in Node.js
+* design was influenced by Sinatra
+* makes it easy to define the endpoints of your web-based service
+* has features (such as serving statif files) that allow you to creat a website
+* minimal framework; designed to be augemnted by node packages that are then wired in as middleware
+
+Example
+```
+mkdir express_test
+cd express_test/
+npm init
+npm install --save express
+npm install --save body-parser
+npm install --save morgan
+npm list
+```
+
+Can use "-g" to install globally instead of locally for webapp.
+
+Example test.js
+```javascript
+var express = require('express');
+var parser = require('body-parser');
+var logger = require('morgan');
+
+var time = require('./lib/time.js');
+
+var app = express();
+
+app.set('port', process.env.PORT || 3000);
+app.set('env', process.env.NODE_ENV || 'development');
+
+app.use(parser.json());
+
+app.use(logger('dev'));
+
+app.get('/api/1.0/current_time', function(req, res){
+	res.json({status:true, time: time.current_tim()});
+});
+
+app.post('/api/1.0/from_now', function(req, res){
+	res.json({status:true, data:time.from_now(req.body.date)});
+});
+
+app.listen(app.get('port'), function(){
+	var message = 'Express started on http://localhost:';
+	console.log(message + app.get('port'));
+	message = 'Express is executing in the ';
+	console.log(message + app.get('env') + ' environment');
+});
+```
+
+Example time.js
+```javascript
+var moment = require('moment');
+
+var current_time = function(){
+	return moment().format('LL; LTS');
+}
+
+var from_now = function(date){
+	return moment(date, 'YYY-MM-DD').fromNow();
+}
+
+exports.current_time = current_time;
+exports.from_now = from_now;
+```
+
+curl command
+```
+$ curl -X POST --data '{"date":"2012-01-25"}' --header "Content-Type: application/json" http://localhost:3000/api/1.0/from_now
+```
+
+For Postman, set header Content-Type to application/json and put {"date":"2012-01-25"} in form data.

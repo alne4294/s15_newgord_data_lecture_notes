@@ -446,3 +446,58 @@ $ curl -X POST --data '{"date":"2012-01-25"}' --header "Content-Type: applicatio
 For Postman, set header Content-Type to application/json and put {"date":"2012-01-25"} in form data.
 
 _Slides for this lecture at: http://cu-data-engineering-s15.github.io/lecture_06/#/21_
+
+## Lecture 7
+
+#### AngularJS
+Open source web application framework.  Powerful, but complicated.
+
+##### Core Concepts
+* Data Bindings - the value of an HTML tag can be associated with a model object.  When one changes, Angular updates the other automatically.
+* Controllers - associated with a portion of your HTML and define all of the state and methods that can be accessed within that section of the page.  Allows you to _modularize_ your web apps. Manages data for some portion of a page while it is being displayed.
+* Services - Allows you to maintain state between invocations of a controller or if you need to share state between two different controllers. Created when Angular app is initialized and will remain in place for lifetime of the application.
+* Directives - ubiquitous, allows Angular to integrate into HTML in natural way. Can also create reusable components that combine controllers, data, and HTML.  For example, you can create a _login form_ component that can be re-used across multiple projects.
+* Embeddable - Can control as much or as little of a web page as you specify.  It's easy to embed a small Angular component into an existing page and tehn incrementally add enw functionality over time.
+* Injectable - _Dependency injection_  allows you to inject objects into a class, rather than relying on the class to create the object itself (e.g. factory design pattern, Spring).  Angular declares depndencies up front instead of using a main routine.  At run-tim, it will locate dependencies and inject them.
+
+Entire MVC being essentially created in browser.
+
+##### Moodules
+A module is the parimary way to package up a set of controllers into an Angular app.
+
+Second parameter indicates that Angular needs to create it.  This has no dependencies.
+```javascript
+angular.module('contactsApp', [])
+```
+
+Once created, you can gain handle with no dependencies
+```javascript
+angular.module('contactsApp')
+```
+
+To narrow scope
+```javascript
+<html ng-app="contactsApp">
+</html>
+```
+
+```javascript
+angular.module('contactsApp').controller('MainController', [<dependencies and code>])
+```
+
+Simple controller with no dependencies.  Aliasing "this" creates closure.
+```javascript
+<MODULE>.controller('MainController', [function(){
+	var self = this;
+	self.name = "ken";
+	self.update = function(){
+		self.name = "Kenneth";
+	};
+}]);
+```
+
+
+
+
+
+

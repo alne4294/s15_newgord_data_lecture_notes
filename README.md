@@ -495,7 +495,13 @@ Simple controller with no dependencies.  Aliasing "this" creates closure.
 	};
 }]);
 ```
+## Lecture 8
 
+#### Angular Demonstration
+
+Angular runs in web browser.  Node is platform for web server.  Express builds on top of Node.
+
+Rails is middleware.  E.g., Apache can hand-off to rails.
 
 
 

@@ -503,7 +503,68 @@ Angular runs in web browser.  Node is platform for web server.  Express builds o
 
 Rails is middleware.  E.g., Apache can hand-off to rails.
 
+## Lecture 9
 
+#### Implicit Binding
 
+When a function is called as a method on an object. A function in this context is able to change the values of that object's properties via this.
 
+```javascript
+// Example 3
+var increment = function() {
+  this.age = this.age + 5;
+};
 
+var person1 = {
+  age: 42,
+  makeMeOlder: increment
+};
+
+var person2 = {
+  age: 23,
+  makeMeOlder: increment
+};
+
+person1.makeMeOlder();
+person2.makeMeOlder();
+
+console.log(person1.age); // prints 47
+console.log(person2.age); // prints 28
+```
+
+#### Explicit Binding
+
+When the execution context for a function is selected ahead of time and then used when that function is called, using bind(), call(), and apply().
+
+```javascript
+// Example 4
+var increment = function(delta) {
+  this.age = this.age + delta;
+};
+
+var person = {
+  age: 42
+}
+
+increment.call( person, 5 ); // or increment.apply( person, [5] );
+
+console.log( person.age ); // prints 47
+```
+
+#### Angular Continued
+
+#### IIFES
+
+JavaScript design pattern which produces a lexical scope using JavaScript's function scoping. Immediately-invoked function expressions can be used to avoid variable hoisting from within blocks, protect against polluting the global environment and simultaneously allow public access to methods while retaining privacy for variables defined within the function. This pattern has been referred to as a self-executing anonymous function. -Wikipedia
+
+A common way to express this is to enclose both the function expression and invocation in parentheses.
+```javascript
+(function(){
+  /* code */ 
+}());
+ 
+// And that's the way if some parameters shall be passed
+(function(a, b){
+  /* code */ 
+})(arg1, arg2); //arg1 -> a; arg2 -> b
+```

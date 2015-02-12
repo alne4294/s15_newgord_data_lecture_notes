@@ -568,3 +568,20 @@ A common way to express this is to enclose both the function expression and invo
   /* code */ 
 })(arg1, arg2); //arg1 -> a; arg2 -> b
 ```
+
+## Lecture 10
+
+#### Twitter application
+
+*OAuth* is a web-based security protocol that allows a web service to associate service invocations iwth users and applications. Allows an app to act on behalf of many users.
+
+*Consumer key* identifies a particular app and developer.
+
+*Access token* identifies particular user. Short-cuts web-based authentication process.
+
+*Authorization header* is simplified by simple_oath and is required by Twitter for every request.  To sign the request, we have to pass the method, url, params, and our tokens.
+
+To create app:
+* Create file called oauth.properties with a single JSON object with the four fields and their respective values.
+* See slides for Ruby setup pre-reqs
+

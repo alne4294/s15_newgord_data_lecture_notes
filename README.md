@@ -585,3 +585,35 @@ To create app:
 * Create file called oauth.properties with a single JSON object with the four fields and their respective values.
 * See slides for Ruby setup pre-reqs
 
+## Lecture 11
+
+## Lecture 12
+
+Web analytics application
+
+Database bottlenecking - vertical scaling scaling
+
+possible solutions: 
+* buying better machines/hardware
+* creating a cache before database access
+* sharding, more databses (multiple instances/servers of the database)
+
+##### NoSQL 
+
+*NoSQL* can help solve some of these problems - fault tolerant.  No schema and first-order normalization ("Disk space is cheap"), more flexible.
+
+Types:
+* Key-vlaue
+* Graphs
+* Columnar (not the same as column-store)
+* Documents
+
+*Key-Value Store* - the simple database thatreturns an arbitrarily large set of datat when presented with a string/key
+
+*Graph stores* - store graph structures rather than table/row/column structures.  Uses structrual query languages.
+
+*Columnar stores* - very fast writes and able to scale to enormous amounts of data.  E.g., Netflix uses Cassandra to store and serve its movies.  Hash tables all the way down.
+
+*Document stores* - like key-value store but with more structure.  Can be indexed.
+
+Polygots/aggregations of different database stores.

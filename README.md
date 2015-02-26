@@ -617,3 +617,9 @@ Types:
 *Document stores* - like key-value store but with more structure.  Can be indexed.
 
 Polygots/aggregations of different database stores.
+
+## Lecture 13
+
+## Lecture 14
+
+MongoDB overview

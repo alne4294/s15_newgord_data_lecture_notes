@@ -623,3 +623,93 @@ Polygots/aggregations of different database stores.
 ## Lecture 14
 
 MongoDB overview
+
+## Lecture 15
+
+## Lecture 16
+
+Importing tweets into MongoDB
+
+Creating indexes and compound indexes
+
+Getting Started
+```ruby
+mkdir import_tweets
+cd import_tweets
+vi Gemfile
+```
+Gemfile should contain...
+```ruby
+source 'https://rubygems.org'
+gem 'mongo'
+```
+Then type:
+```ruby
+bundle install 
+vi import.rb
+```
+
+Simplest import.rb:
+```ruby
+require 'bundler/setup'
+
+require 'date'
+require 'json'
+require 'mongo'
+require 'time'
+
+if __FILE__ == $0
+
+  STDOUT.sync = true
+
+  input_file = ARGV[0]
+
+  IO.foreach(input_file) do |line|
+    tweet = JSON.parse(line.chomp)
+  end
+
+end
+```
+
+## Lecture 17
+
+Mongo continued...
+
+Indexes enabling queries
+
+MongoDB supports full text searching
+
+Can weight some search factors more than others
+
+OR, phrase matches, negations.... can get fancy and complicated
+
+GeoJSON can specify points, lineStrings or Polygons.
+
+geojson.io can be used to create a bounding box, integrated into queries
+
+Map Reduce - mongo offeres the ability to create new collections from old celltions using a map function and a reduce function.  It can also take a query, if so, it first finds the results of the query and then applies MapReduce to the result set.
+
+Basic map function that can be used to count up the number of times a screen name appears in a collection
+```
+function () {
+  emit(this.user.screen_name, {count: 1});
+}
+```
+
+A reduce function takes a key and a set of produced documents that were previously emited
+It must return a document that can be sent back into the reduce function in a subsequent phase
+For our example, that means it must generate documents of the form {count: X} where x is a number
+```
+function (key, docs) {
+  var total = 0;
+  for (var i = 0; i < docs.length; i++) {
+    total += docs[i].count;
+  }
+  return {count : total};
+}
+```
+
+End Goal: At the end of the operation, you will have a set of documents in a new collection. 
+Each document will have one key (in this case a screen_name) and a value that is equal to the number of times it appeared in the collection.
+
+

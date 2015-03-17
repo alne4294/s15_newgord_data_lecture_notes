@@ -712,4 +712,40 @@ function (key, docs) {
 End Goal: At the end of the operation, you will have a set of documents in a new collection. 
 Each document will have one key (in this case a screen_name) and a value that is equal to the number of times it appeared in the collection.
 
+## Lecture 17
 
+##### Solr
+
+Simple way to get search functionality for your DB.  Works well with ruby.  Fast, reliable, and has many scalable features.
+
+On top of Lucene (which uses Java, portable) as a RESTful web server API.
+
+When integrating into the model, you can add searchable fields for the classes.  Controller can also get pagination.  The view is where the return values of the query are listed and can be interacted with using a search box.
+
+Ruby convention over configuration.
+
+Pitfalls: Solr reindexes from the beginning, started by default in production environment, solr configs and git
+
+##### Redis
+
+Key-value store DB.
+
+Memory-oriented.  Fast.
+
+Keys: string, concise, max 512MB
+
+Values: strings, can contain any info, max 512MB
+
+Can contain multiple types.  The data is loosely typed.
+
+Features: sorted sets, bitmaps, hyperloglogs, persistence (snapshotting or append-only file)
+
+##### Kafka
+
+Helpful for processing data coming over the network in real-time.
+
+Distributed, fault-tolerant, high-throughput, publish-subscribe, messaging system.
+
+Runs on Apache ZooKeeper, written in Scala.  Keeps all messages for up to N days.
+
+Similar to RabbitMQ, Flume, database, Redis pub/sub, supercomputer.

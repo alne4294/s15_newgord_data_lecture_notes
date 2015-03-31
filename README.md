@@ -587,6 +587,8 @@ To create app:
 
 ## Lecture 11
 
+(Feeling under the weather)
+
 ## Lecture 12
 
 Web analytics application
@@ -620,11 +622,15 @@ Polygots/aggregations of different database stores.
 
 ## Lecture 13
 
+(Familiar with this topic)
+
 ## Lecture 14
 
 MongoDB overview
 
 ## Lecture 15
+
+(Forgot to take notes?)
 
 ## Lecture 16
 
@@ -749,3 +755,31 @@ Distributed, fault-tolerant, high-throughput, publish-subscribe, messaging syste
 Runs on Apache ZooKeeper, written in Scala.  Keeps all messages for up to N days.
 
 Similar to RabbitMQ, Flume, database, Redis pub/sub, supercomputer.
+
+## Lecture 18
+
+(out of town for interview :( )
+
+## Lecture 19
+
+#### Neo4J
+
+Graph Database: nodes and edges
+
+Relationships can have properties, can be single or bi-directional
+
+More likely to run on single server than cluster.
+
+Works well with Germlin and Cypher
+
+Aggregated oriented databases - Neo4J is not one which is why it's hard to shard
+
+#### Apache HBase
+
+Runs on top of Hadoop (MapReduce and HDFS).
+
+Opensource column-oriented Hadoop Database.  Influenced by Google file system -> Google big table.
+
+Schemas contain column families which contain columns.  Columns within column families are contiguous.
+
+Great for scalability

@@ -783,3 +783,11 @@ Opensource column-oriented Hadoop Database.  Influenced by Google file system ->
 Schemas contain column families which contain columns.  Columns within column families are contiguous.
 
 Great for scalability
+
+## Lecture 20
+
+#### Riak
+
+#### Cassandra
+
+Fast, scalable, growing in popularity

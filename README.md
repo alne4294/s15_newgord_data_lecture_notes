@@ -791,3 +791,15 @@ Great for scalability
 #### Cassandra
 
 Fast, scalable, growing in popularity
+
+## Lecture 21
+
+#### Javascript
+
+Scope, Hoisting
+
+JavaScript is compiled
+
+Scope Closure - has scope closures because it has first class functions
+
+No sense of private data, use javascript module design pattern instead where you essentially create variables in function and use getters and setters for access

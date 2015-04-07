@@ -803,3 +803,9 @@ JavaScript is compiled
 Scope Closure - has scope closures because it has first class functions
 
 No sense of private data, use javascript module design pattern instead where you essentially create variables in function and use getters and setters for access
+
+#### Ruby on Rails
+
+Model-view-control pattern
+
+#### Flask

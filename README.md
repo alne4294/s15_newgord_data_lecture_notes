@@ -809,3 +809,13 @@ No sense of private data, use javascript module design pattern instead where you
 Model-view-control pattern
 
 #### Flask
+
+## Lecture 22
+
+#### HDFS
+
+Large file systems.  Map-reduce.
+
+#### Spark
+
+#### Storm

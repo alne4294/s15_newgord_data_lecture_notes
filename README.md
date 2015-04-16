@@ -819,3 +819,15 @@ Large file systems.  Map-reduce.
 #### Spark
 
 #### Storm
+
+## Lecture 23
+
+#### Google Apps
+
+#### Docker
+
+Open-source engine that automates deployment of applications into containers.  Aims to make containers easier to manage and automate.  More lightweight than VMs.
+
+#### Capistrano
+
+Automating server deployment.  Doesn't create new deployments, but gets things up and running very fast.  Based on Rake and written in Ruby.

@@ -831,3 +831,11 @@ Open-source engine that automates deployment of applications into containers.  A
 #### Capistrano
 
 Automating server deployment.  Doesn't create new deployments, but gets things up and running very fast.  Based on Rake and written in Ruby.
+
+## Lecture 24
+
+#### Turf
+
+Turf is GIS for web maps. It’s a fast, compact, and open-source JavaScript library that implements the most common geospatial operations: buffering, contouring, triangular irregular networks (TINs), and more. Turf speaks GeoJSON natively, easily connects to Leaflet, and is now available as a Mapbox.js plugin on our cloud platform.
+
+#### Javascript graphics

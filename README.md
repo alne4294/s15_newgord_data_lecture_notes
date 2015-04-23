@@ -839,3 +839,24 @@ Automating server deployment.  Doesn't create new deployments, but gets things u
 Turf is GIS for web maps. It’s a fast, compact, and open-source JavaScript library that implements the most common geospatial operations: buffering, contouring, triangular irregular networks (TINs), and more. Turf speaks GeoJSON natively, easily connects to Leaflet, and is now available as a Mapbox.js plugin on our cloud platform.
 
 #### Javascript graphics
+
+## Lecture 25
+
+#### Flask
+
+(My presentation)
+
+## Lecture 24
+
+#### D3
+
+JavaScript library for manipulating documents based on data. D3 helps you bring data to life using HTML, SVG, and CSS. D3’s emphasis on web standards gives you the full capabilities of modern browsers without tying yourself to a proprietary framework, combining powerful visualization components and a data-driven approach to DOM manipulation.
+
+#### Leaflet
+
+(My presentation)
+
+#### Vega
+
+Vega is a visualization grammar, a declarative format for creating, saving and sharing visualization designs.
+With Vega you can describe data visualizations in a JSON format, and generate interactive views using either HTML5 Canvas or SVG.

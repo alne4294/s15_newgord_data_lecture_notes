@@ -860,3 +860,20 @@ JavaScript library for manipulating documents based on data. D3 helps you bring 
 
 Vega is a visualization grammar, a declarative format for creating, saving and sharing visualization designs.
 With Vega you can describe data visualizations in a JSON format, and generate interactive views using either HTML5 Canvas or SVG.
+
+## Lecture 25
+
+#### Asynchronous Calling
+
+Callbacks are complicated, moving away from since JavaScript popularity is growing.
+
+#### Titan
+
+Titan is a scalable graph database optimized for storing and querying graphs containing hundreds of billions of vertices and edges distributed across a multi-machine cluster. Titan is a transactional database that can support thousands of concurrent users executing complex graph traversals in real time.
+
+Uses Gremlin (common for graph traversal) and SPARQL (graph-based pattern matching).
+
+#### Amazon Web Services
+
+Computing, storage, databases, networking, security.
+Affordable and good for scaling.
